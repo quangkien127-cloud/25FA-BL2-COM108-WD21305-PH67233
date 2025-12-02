@@ -3,9 +3,53 @@
 
 #include <stdio.h>
 
+void lapChucNang(int chonChucNang)
+{
+	int tiepTuc = 1;
+	while (tiepTuc == 1)
+	{
+		switch (chonChucNang)
+		{
+		case 1:
+			kiemTraSoNguyen();
+			break;
+		case 2:
+			sapXepPhanTuMang();
+			break;
+		case 3:
+			// ham goi chuc nang 3
+			break;
+		default:
+			printf("Chon sai. Chuc nang hop le [0-3]");
+			break;
+		}
+
+		printf("Tiep tuc thuc hien chuc nang nay? [1=Co | 0=Khong]: ");
+		scanf("%d", &tiepTuc);
+		system("cls");
+	}
+
+}
+
 int main()
 {
-    printf("Hi there!\n");
+	int chonChucNang;
+	do
+	{
+		printf("Menu");
+		printf("\n");
+		printf("1. Kiem Tra So Nguyen");
+		printf("\n");
+		printf("2. Sap Xep Phan  Tu Mang 1 chieu");
+		printf("\n");
+		printf("3. TEN chuc nang 3");
+		printf("\n");
+		printf("0. Thoat");
+		printf("\n");
+		printf("Hay chon chuc nang [0-3]: ");
+		scanf("%d", &chonChucNang);
+		lapChucNang(chonChucNang);
+	} while (chonChucNang != 0);
 }
 
 // Debug/Run chuong trinh: bam "F5" hoac "Debug > Start Debugging" tren menu
