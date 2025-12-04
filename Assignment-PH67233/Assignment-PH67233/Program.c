@@ -34,7 +34,7 @@ void kiemTraSoNguyen()
 	else
 		printf("=> %d KHONG la so nguyen to.\n", x);
 
-	// 3. Kiem tra so chinh phuong
+	
 	int can = sqrt(x);
 	if (can * can == x)
 		printf("=> %d la so chinh phuong.\n", x);
@@ -157,7 +157,8 @@ void tinhLaiVay() {
 	long tienConLai = tienVay;
 
 	printf("\n%-8s %-15s %-15s %-15s %-15s\n",
-		"Ky han", "Lai phai tra", "Goc phai tra", "Tong phai tra", "Con lai");
+		"Ky han", "Lai phai tra", "Goc phai tra"
+		, "Tong phai tra", "Con lai");
 
 	for (int i = 1; i <= kyHan; i++) {
 		long laiPhaiTra = tienConLai * laiSuat;
@@ -197,7 +198,7 @@ void lapChucNang(int chonChucNang)
 			tinhLaiVay();
 			break;
 		default:
-			printf("Chon sai. Chuc nang hop le [0-3]");
+			printf("Chon sai. Chuc nang hop le [0-6]");
 			break;
 		}
 
@@ -217,7 +218,7 @@ int main()
 		printf("\n");
 		printf("1. Kiem Tra So Nguyen");
 		printf("\n");
-		printf("2. uocChungBoiChung2So");
+		printf("2. Uoc Chung Boi Chung 2 So");
 		printf("\n");
 		printf("3.  Tinh Tien Karaoke");
 		printf("\n");
@@ -225,7 +226,7 @@ int main()
 		printf("\n");
 		printf("5. Doi Tien ");
 		printf("\n");
-		printf("6. tinhLaiVay ");
+		printf("6. Tinh Lai Vay ");
 		printf("\n");
 		printf("0. Thoat");
 		printf("\n");
